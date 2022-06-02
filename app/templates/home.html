@@ -2,9 +2,28 @@
 {% load bootstrap4 %}
 {% load static %}
 
-{% block content%}
 
-<div class="container-fluid">
+{% block content %}
+<div class="container-fluid"id="hero">
+    {% include 'navbar.html'%}
+
+    <div class="row ">
+        <div class="col-md-6" id="center">
+            <h2 id="heading" >Unlimited movies, TV 
+                shows, and more.</h2>
+            <p id="paragraph-header" >Watch anywhere. Cancel anytime.</p>
+            <p class="headline">Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div class="input-group input-group-lg mb-3" id="index">
+                <input type="text" class="form-control" placeholder="Email Address..." aria-label="Recipient's username" aria-describedby="button-addon2" id="input">
+                <div class="input-group-append">
+                  <button class="btn" type="button" id="button-addon2">Get Started <i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     
 </div>
 
