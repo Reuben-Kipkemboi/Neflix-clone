@@ -6,6 +6,9 @@ import  requests
 
 THE_MOVIE_DB_API_KEY ="41ee283e92c80a93f1e33b97fa9b441e"
 
+def home(request):
+    return render(request, 'home.html')
+
 
 #-----------Movies ------------------------------------------------------
 def netflix_home(request):
