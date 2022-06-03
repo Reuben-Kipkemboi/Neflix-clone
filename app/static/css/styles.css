@@ -70,6 +70,7 @@
     height: 100vh;
     color: #fff;
     font-size: 3.5vh;
+    width: 100%;
 
 }
 #register-btn{
@@ -80,4 +81,8 @@
     background-color: #fff;
     color: #e2402c;
     outline: 2px solid #000;
+}
+.fonts{
+    color: #e2402c;
+    font-size: large;
 }

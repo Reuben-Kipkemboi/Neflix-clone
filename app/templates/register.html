@@ -11,22 +11,51 @@
         <form class="shadow" id="form">
             <div class="form-group">
                 <label for="exampleInputEmail1">User Name</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-solid fa-file-signature fonts"></i></div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1">Email Address</label>
+                <label class="sr-only" for="inlineFormInputGroup">Email address</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-solid fa-envelope fonts"></i></div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputEmail1">Password</label>
+                <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-solid fa-key fonts"></i></div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="password">
+                </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Verify Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputEmail1">Verify Password</label>
+                <label class="sr-only" for="inlineFormInputGroup">Verify Password</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa-solid fa-key fonts"></i></div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="verify password">
+                </div>
             </div>
 
             <button type="submit" class="btn" id="register-btn">Register with Netflix</button>
+            <p class="text-center">
+                <small class="text-white font-weight-bold">Already  have an Account? <a href="{% url 'login'%}">Login here</a></small>
+            </p>
+
+            
         </form>
     </div>
     <div class="col-md-3"></div>
