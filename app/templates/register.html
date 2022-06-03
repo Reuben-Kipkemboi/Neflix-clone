@@ -15,7 +15,7 @@
                 <label class="sr-only" for="inlineFormInputGroup">Username</label>
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fa-solid fa-file-signature fonts"></i></div>
+                    <div class="input-group-text"><i class="fas fa-user"></i></div>
                   </div>
                   {{form.username}}
                   <!-- <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username"> -->
@@ -66,24 +66,3 @@
 </div>
 {% endblock content %}
 
-<form action="" method="POST">
-    <!-- {% url 'register'%} -->
-    {% csrf_token %}
-    {{form.username.label}}
-    {{form.username}}
-
-    {{form.email.label}}
-    {{form.email}}
-
-    {{form.password1.label}}
-    {{form.password1}}
-
-    {{form.password2.label}}
-    {{form.password2}}
-
-
-
-
-    <input type="submit" value="Register for Netflix">
-
-</form>
