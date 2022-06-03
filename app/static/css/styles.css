@@ -113,9 +113,109 @@
     /* position: relative; */
     float: right;
 }
+#section{
+    border-top: 7px solid grey;
+    padding-top: 7%;
+    padding-bottom: 5%;
+
+}
 #recoomendations{
     color:#000;
     font-size: 3vh;
     text-decoration: none;
     list-style-type: none;
+}
+#section2{
+    border-top: 7px solid grey;
+    padding-top: 7%;
+    padding-bottom: 5%;
+}
+#girl-jpg{
+    margin-top:-4%;
+}
+#heading3{
+    font-size: 6vh;
+    color: #fff;
+    font-weight: bold;
+}
+#padding-left-left{
+    margin-left: 15%;
+    padding-top: 3%;
+}
+#section3{
+    padding-left: 5%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    border-top: 7px solid grey;
+    border-bottom: 7px solid grey;
+}
+#stream, #watch{
+    color: #fff;
+}
+#stream{
+    font-size: 4vh;
+}
+#watch{
+    font-size: 8vh;
+    font-weight: bold;
+}
+#section4{
+    border-bottom: 7px solid grey;
+    padding-top: 7%;
+    padding-bottom: 5%;
+
+}
+#padding-same{
+    padding-top: 10%;
+
+}
+#app{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 4vh;
+}
+#section5{
+    border-bottom: 7px solid grey;
+    padding-top: 7%;
+    padding-bottom: 3%;
+    line-height: 2.0;
+
+}
+#heading11{
+    color: #fff;
+    font-size: 8vh;
+    font-weight: bold;
+}
+
+#frequent{
+    color: #fff;
+    padding: 3%;
+    font-weight: bold;
+    font-size: 8vh;
+}
+.quiz{
+    height: 14vh;
+    width: 100%;
+    background-color: #303030;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.quiz p{
+    color: #fff;
+    font-size: 5vh;
+    padding-top:1.5% ;
+    padding-left: 2%;
+}
+.quiz #plus{
+    color: #fff;
+    font-size: 5vh;
+    padding-top:3% ;
+    padding-right: 2%;
+    font-weight: bold;
+
+
 }
