@@ -1,4 +1,5 @@
 from ast import Constant
+from cmath import log
 from os import environ
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
@@ -11,8 +12,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from.forms import RegisterForm
 
-from netflix.settings import THE_MOVIE_DB_API_KEY
-# print(settings.THE_MOVIE_DB_API_KEY)
+from django.contrib.auth import authenticate, login, logout
+
 
 THE_MOVIE_DB_API_KEY = config('THE_MOVIE_DB_API_KEY')
 
@@ -90,13 +91,27 @@ def register(request):
 
 
 def login(request):
+    
+    if request.method =="POST":
+        username = request.POST.get('username')
+        password= request.POST.get('password')
+        
+        user=authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.info(request, "Seems username or password is invalid")
+            
+    
     return render(request, 'login.html')
 
+def logout(request):
+    logout(request)
+    return redirect ('login')
 
 
 
-# https://api.themoviedb.org/3/movie/550?api_key=41ee283e92c80a93f1e33b97fa9b441e
 
 
-# MY_API_KEY = 'MOVIE_DB_API_KEY'
-# base_url = 'https://api.themoviedb.org/3/'
