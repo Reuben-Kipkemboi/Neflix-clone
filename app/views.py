@@ -1,10 +1,20 @@
+from ast import Constant
+from os import environ
 from django.shortcuts import render
 from django.views.generic import ListView
 import  requests
+from decouple import config
+
+from netflix.settings import THE_MOVIE_DB_API_KEY
+# print(settings.THE_MOVIE_DB_API_KEY)
+
+THE_MOVIE_DB_API_KEY = config('THE_MOVIE_DB_API_KEY')
+
+
 
 # Create your views here.
 
-THE_MOVIE_DB_API_KEY ="41ee283e92c80a93f1e33b97fa9b441e"
+
 
 def home(request):
     return render(request, 'home.html')
