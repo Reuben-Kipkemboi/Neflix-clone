@@ -7,122 +7,366 @@
     <h3 class="text-center">Now Playing</h3>
     <hr>
     <div class="row">
-        
         {% for movie in movies %}
         <div class="col-md-3 mb-3">
-            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%" alt="">
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{movie.id}}">
             <p>{{movie.title}}</p>
         </div>
+
         {% endfor %}
+        {% for movie in movies %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{movie.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" id="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{movie.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%"
+                                height="300px" alt="movie poster">
+                                <blockquote>Release Date:{{movie.release_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{movie.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{movie.vote_average}}</p>
 
-        <div class="col-md-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
-
 
 
     <h3 class="text-center">Popular</h3>
     <hr>
     <div class="row">
-        
         {% for movie in popular_movies %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{movie.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{movie.id}}">
+                <p>{{movie.title}}</p>
+        </div>
+
+        {% endfor %}
+        {% for movie in popular_movies %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{movie.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{movie.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%"
+                                height="300px" alt="movie poster">
+                                <blockquote>Release Date:{{movie.release_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{movie.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{movie.vote_average}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
 
 
     <h3 class="text-center">Top Rated</h3>
     <hr>
     <div class="row">
-        
         {% for movie in top_movies %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{movie.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{movie.id}}">
+
+                <p>{{movie.title}}</p>
+        </div>
+
+        {% endfor %}
+        {% for movie in top_movies %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{movie.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{movie.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%"
+                                height="300px" alt="movie poster">
+                                <blockquote>Release Date:{{movie.release_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{movie.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{movie.vote_average}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
-
-
 
     <h3 class="text-center">Upcoming</h3>
     <hr>
     <div class="row">
-        
-        {% for movie in up_comings %}
+        {% for movie in upcomings %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{movie.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{movie.id}}">
+                <p>{{movie.title}}</p>
+        </div>
+
+        {% endfor %}
+        {% for movie in upcomings %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{movie.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{movie.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" width="100%"
+                                    height="90%" alt="movie poster">
+                                <blockquote>Release Date:{{movie.release_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{movie.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{movie.vote_average}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
 
     <h2 class="text-center">TV shows</h2>
     <h3 class="text-center">Popular TV shows</h3>
     <hr>
-    <div class="row">
-        
-        {% for show in shows %}
-        <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{show.title}}</p>
+        <div class="row">
+            {% for show in shows %}
+            <div class="col-md-3 mb-3">
+                <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%"
+                    alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{show.id}}">
+                    <p>{{show.name}}</p>
+            </div>
+    
+            {% endfor %}
+            {% for show in shows %}
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop{{show.id}}" data-backdrop="static" data-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">{{show.name}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%"
+                                        height="300px" alt="movie poster">
+                                    <blockquote>First Air Date:{{show.first_air_date}}</blockquote>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Description</h3>
+                                    <p>{{show.overview}}</p>
+                                    <h3>Rating</h3>
+                                    <p>{{show.vote_average}}</p>
+                                    <h4>Seasons</h4>
+                                    <p>{{show.season_number}}</p>
+                                    <h4>Episodes</h4>
+                                    <p>{{show.number_of_episodes}}</p>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Watch Trailer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
-    </div>
 
 
     <h3 class="text-center">Airing Today TV shows</h3>
     <hr>
     <div class="row">
-        
         {% for show in airing_shows %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{show.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{show.id}}">
+                <p>{{show.name}}</p>
+        </div>
+
+        {% endfor %}
+        {% for show in airing_shows %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{show.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{show.name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%"
+                                    height="300px" alt="movie poster">
+                                <blockquote>First Air Date:{{show.first_air_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{show.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{show.vote_average}}</p>
+                                <h4>Seasons</h4>
+                                <p>{{show.season_number}}</p>
+                                <h4>Episodes</h4>
+                                <p>{{show.number_of_episodes}}</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
-
 
     <!-- on air Tv shows -->
 
     <h3 class="text-center">On Air TV shows</h3>
     <hr>
     <div class="row">
-        
         {% for show in on_air %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{show.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{show.id}}">
+                <p>{{show.name}}</p>
+        </div>
+
+        {% endfor %}
+        {% for show in on_air %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{show.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{show.name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%"
+                                    height="300px" alt="movie poster">
+                                <blockquote>First Air Date:{{show.first_air_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{show.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{show.vote_average}}</p>
+                                <h4>Seasons</h4>
+                                <p>{{show.season_number}}</p>
+                                <h4>Episodes</h4>
+                                <p>{{show.number_of_episodes}}</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
 
 
@@ -131,17 +375,55 @@
     <h3 class="text-center">Top Rated TV shows</h3>
     <hr>
     <div class="row">
-        
         {% for show in top_rated %}
         <div class="col-md-3 mb-3">
-             <!-- <p>{{movie.overview}}</p>  -->
-            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%" alt="">
-            <p>{{show.title}}</p>
+            <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%" height="90%"
+                alt="movie poster" data-toggle="modal" data-target="#staticBackdrop{{show.id}}">
+                <p>{{show.name}}</p>
+        </div>
+
+        {% endfor %}
+        {% for show in top_rated %}
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop{{show.id}}" data-backdrop="static" data-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">{{show.name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://image.tmdb.org/t/p/w500/{{show.poster_path}}" width="100%"
+                                    height="300px" alt="movie poster">
+                                <blockquote>First Air Date:{{show.first_air_date}}</blockquote>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Description</h3>
+                                <p>{{show.overview}}</p>
+                                <h3>Rating</h3>
+                                <p>{{show.vote_average}}</p>
+                                <h4>Seasons</h4>
+                                <p>{{show.season_number}}</p>
+                                <h4>Episodes</h4>
+                                <p>{{show.number_of_episodes}}</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Watch Trailer</button>
+                    </div>
+                </div>
+            </div>
         </div>
         {% endfor %}
-        
-        <div class="col-md-4">
-        </div>
     </div>
 </div>
 {% endblock content%}

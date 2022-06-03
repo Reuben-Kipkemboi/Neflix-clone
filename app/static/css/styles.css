@@ -86,3 +86,8 @@
     color: #e2402c;
     font-size: large;
 }
+.modal-content{
+    background-image: linear-gradient(to right top, #000000, #3a161e, #711f2c, #ab2c31, #e2402c);
+    color: #fff;
+    
+}
