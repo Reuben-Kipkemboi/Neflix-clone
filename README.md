@@ -100,8 +100,9 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Known bugs
 
-* User login
 * Application breaks at some point due to invalid response from the API
+* still working on user Authentication
+* No movie Trailers at the moment
 
 
 ## Author's Info
