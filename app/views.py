@@ -21,8 +21,6 @@ THE_MOVIE_DB_API_KEY = config('THE_MOVIE_DB_API_KEY')
 
 # Create your views here.
 
-
-
 def home(request):
     return render(request, 'home.html')
 
