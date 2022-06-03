@@ -1,9 +1,11 @@
 from ast import Constant
 from os import environ
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 import  requests
 from decouple import config
+from django.contrib import messages
+
 
 #for our forms
 from django.contrib.auth.forms import UserCreationForm
@@ -80,8 +82,11 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, "account created for" + user )
+            return redirect('login')
         
-    return render(request, 'register.html', {'form':form})
+    return render(request, 'register.html', {'form':form, 'messages':messages})
 
 
 def login(request):
