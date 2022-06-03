@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* *{
-    font-family: 'Bebas Neue', cursive;
-} */
 *{
-    /* color: #fff; */
-}
 
+}
 #logo{
     width: 100px;
     height: 5vh;
@@ -14,7 +10,7 @@
 #hero{
     background-image: url('/static/images/netflix-cover.jpg');
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
     
 }
 #button-addon2{
@@ -42,19 +38,13 @@
     transform: translate(-50%, -50%) 
    
 }
-/* #nav{
-    /* position: absolute; 
-    
-}
-#ml-auto{
-     position: absolute;
-    float: right;
-} */ 
 #row2{
     background-color: #000;
+    width: 100%;
+    /* margin-left: -16px; */
 }
 #section{
-    padding: 8%;
+    /* padding: 8%; */
 
 }
 #heading2{
@@ -70,8 +60,24 @@
 
 }
 .horizontal{
-    border: 4px solid grey;
+    /* border: 4px solid grey; */
 }
-#headline{
+.headline{
     color: #fff;
+}
+#register-page{
+    background-image: url('/static/images/netflix-cover.jpg');
+    height: 100vh;
+    color: #fff;
+    font-size: 3.5vh;
+
+}
+#register-btn{
+    background-color: #e2402c;
+    color: white;
+}
+#register-btn:hover{
+    background-color: #fff;
+    color: #e2402c;
+    outline: 2px solid #000;
 }

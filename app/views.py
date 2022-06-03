@@ -5,6 +5,10 @@ from django.views.generic import ListView
 import  requests
 from decouple import config
 
+#for our forms
+from django.contrib.auth.forms import UserCreationForm
+from.forms import RegisterForm
+
 from netflix.settings import THE_MOVIE_DB_API_KEY
 # print(settings.THE_MOVIE_DB_API_KEY)
 
@@ -67,6 +71,21 @@ def netflix_home(request):
     
 
     return render (request, 'index.html',{'movies':now_playing_movies,'popular_movies':popular_ones_now, 'up_comings': upcomings ,'top_movies':top_ratings,  'shows':shows,'airing_shows':airing_shows,'top_rated':top_rated,'on_air':on_air})
+
+def register(request):
+    form = RegisterForm()
+    
+    
+    if request.method =="POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+        
+    return render(request, 'register.html', {'form':form})
+
+
+def login(request):
+    return render(request, 'login.html')
 
 
 
